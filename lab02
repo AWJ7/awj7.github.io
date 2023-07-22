@@ -1,0 +1,25 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>Lab02</title> 
+</head>
+<body>
+
+  <h2>Spaceflight Records</h2>
+
+  <p>This is a website displaying tables and lists that contain <strong>records for human spaceflight!</strong></p>
+
+  <h4>Five Longest Human Spaceflights</h4>
+
+      <table>
+        <tr>
+          <th>Crew</th>
+          <th>Time in Space</th>
+          <th>Country</th>
+        </tr>
+        <tr>
+          <td>Valeri Polyakov</td>
+  				<td>437.7 days</td>
+					<td>Russia</td>
+				</tr>
+
