@@ -2,21 +2,16 @@ p, li, a {
   font-family: sans-serif;
 }
 
-.header {
- list-style-type: none;
+ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #333;
 }
 
-.header-left {
-  float: left; 
-  font-family: monospace; 
-}
-
-.header-right {
-  float: right; 
+li {
+  float: left;
 }
 
 li a {
@@ -25,10 +20,6 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-}
-
-li a:hover {
-  background-color: #111;
 }
 
 
