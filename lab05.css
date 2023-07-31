@@ -31,6 +31,7 @@ p {
 }
 
 .main-image {
+  height: 90%; 
   width: 90%;
   background-color: black; 
 }
@@ -38,7 +39,7 @@ p {
 .image-caption {
   padding-top: 5px; 
   text-align: center; 
-  
+}
 
 
 
