@@ -4,8 +4,8 @@ p {
 
 .header {
   color: #FFFFFF;
-  background-color: #000000; 
-  display: none;
+  background-color: #000000;
+  overflow: hidden; 
 }
 
 .header-text {
