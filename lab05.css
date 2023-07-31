@@ -1,4 +1,4 @@
-p {
+p, li {
   font-family: sans-serif;
 }
 
@@ -6,28 +6,20 @@ p {
   color: #FFFFFF;
   background-color: #000000;
   overflow: hidden; 
+  padding: 2% 0 2% 0; 
 }
 
-.header-text {
-  font-family: monospace;
-  font-size: 55px;
-  padding-left: 1%; 
+.header-left {
+  float: left; 
+  font-family: monospace; 
 }
 
-.nav {
-  float: right;
-  
+.header-right {
+  float: right; 
 }
 
-.nav a {
-  padding: 15px 20px; 
-  font-size: 14px;
-  color: #FFFFFF;
-}
 
-.nav a:hover {
-  color: blue;
-}
+
 
 .main-image {
   text-align: center; 
