@@ -1,14 +1,14 @@
-.header {
-  height: 10%;
-  background-color: #000000;
-  color: white; 
-  margin: 0;
-}
-
 .header h1 {
   padding-top: 10px; 
   padding-right: 10px;
   margin: 0;
+  background-color: black; 
+}
+
+nav a {
+  float: right;
+  color: white; 
+  padding: 10px 10px 10px 10px; 
 }
 
 .main-img {
@@ -26,10 +26,9 @@
   font-size: 10px; 
 }
 
-nav a {
-  float: right;
-  color: white; 
-}
+
+
+
 
 
   
