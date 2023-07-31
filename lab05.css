@@ -15,6 +15,7 @@ nav a {
 .main-img {
   text-align: center; 
   background-color: #000000;
+  padding-bottom: 20px; 
 }
 
 .main-img img {
@@ -25,7 +26,10 @@ nav a {
   text-align: center; 
   font-family: serif; 
   font-size: 10px; 
+  background-color: navy; 
 }
+
+
 
 
 
