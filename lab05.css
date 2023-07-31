@@ -11,7 +11,15 @@ p {
 .header-text {
   font-family: monospace;
   font-size: 55px;
-  display: inline-block;
+}
+
+.nav {
+  float: right; 
+}
+
+.nav a {
+  padding: 15px 20px; 
+  font-size: 14px;
 }
 
 
