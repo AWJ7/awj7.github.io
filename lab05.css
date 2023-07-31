@@ -5,6 +5,11 @@
   margin-bottom: 10px; 
 }
 
+.header h1 {
+  padding-top: 10px; 
+  padding-right: 10px; 
+}
+
 .main-img {
   text-align: center; 
   background-color: #000000;
