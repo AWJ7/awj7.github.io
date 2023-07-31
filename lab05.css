@@ -5,6 +5,7 @@ p {
 .header {
   color: #FFFFFF;
   background-color: #000000; 
+  display: none;
 }
 
 .header-text {
