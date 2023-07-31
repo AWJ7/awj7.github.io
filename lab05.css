@@ -1,4 +1,4 @@
-p, li {
+p, li, a {
   font-family: sans-serif;
 }
 
@@ -6,7 +6,8 @@ p, li {
   color: #FFFFFF;
   background-color: #000000;
   overflow: hidden; 
-  padding: 2% 0 2% 0; 
+  padding: 2% 0 2% 0;
+  list-style-type: none;
 }
 
 .header-left {
