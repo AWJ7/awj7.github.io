@@ -26,8 +26,7 @@ p {
 }
 
 .nav a:hover {
-  background-color: #fffff;
-  color: black;
+  color: blue;
 }
 
 .main-image {
@@ -37,7 +36,6 @@ p {
 .main-image img {
   height: 90%; 
   width: 90%;
-  background-color: black; 
 }
 
 .image-caption {
