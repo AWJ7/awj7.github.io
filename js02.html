@@ -18,7 +18,7 @@
           $("#word").html(blanks);
           
           
-          $(".letter").click()
+          $(".letter").click(
           
             function() {
                var id = $(this).attr('id');
@@ -52,7 +52,9 @@
                   }
           
                }
+            
             }
+            )
         });
   
   
