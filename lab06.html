@@ -5,17 +5,15 @@
   <link rel="stylesheet" href="../lab05.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-      $(document).ready(function() {
-
         function replaceImage() {
             $('.footer-img').attr('src', '../moon.jpg');
     }
 
-});
-
-
-
-    
+        $("button#button").click (
+          
+              replaceImage();
+          )
+  
   </script>
 </head>
 
@@ -38,7 +36,7 @@
     
   <div class="footer">
     <h3 class="footer-text">Happy Launching!</h3>
-    <button id="button" onclick="replaceImage()">Click me!</button>
+    <button id="button">Click me!</button>
     <br>
     <div class="footer-img"><img src="../launch.jpg" width="25%%"></img></div>
   
