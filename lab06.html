@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Lab05</title>
+  <title>Lab06</title>
   <link rel="stylesheet" href="../lab05.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
@@ -11,10 +11,6 @@
             $('.footer-img').attr('src', '../moon.jpg');
     }
 
-  
-      $('#button').on('click', function() {
-            replaceImage();
-  });
 });
 
 
@@ -42,7 +38,7 @@
     
   <div class="footer">
     <h3 class="footer-text">Happy Launching!</h3>
-    <button id="button">Click me!</button>
+    <button id="button" onclick="replaceImage()">Click me!</button>
     <br>
     <div class="footer-img"><img src="../launch.jpg" width="25%%"></img></div>
   
