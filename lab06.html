@@ -5,13 +5,12 @@
   <link rel="stylesheet" href="../lab05.css">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
-        function replaceImage() {
-            $('#launch').attr("width","90%");
-    }
+        
 
-        $("button").click (
-          
-              replaceImage()
+        $("button").click( 
+           function() {
+            $('#launch').toggle();
+              }
           );
   
   </script>
