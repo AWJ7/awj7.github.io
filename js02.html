@@ -23,7 +23,9 @@
 
                if (guesses.includes(id)) {
                  $("#error_msg").hmlt("You already guessed " + id); 
-            }
+            } else {
+                 guesses = guesses + id;
+               }
           
           
       
