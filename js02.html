@@ -9,11 +9,8 @@
     $(document).ready(
 
         function() {
-
-          import words_list from '../words.json';
-
           
-          
+          var words_list = ['happy', 'sad', 'normal']
           var total_guesses = 10; 
           var word = words_list[Math.floor(Math.random()*words_list.length)];
           var blanks = "";
