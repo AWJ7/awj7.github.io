@@ -15,6 +15,9 @@
            var blanks = " _ _ _ _"; 
            var guesses = "";
           
+          $("#word").html(blanks);
+          
+          
           $(".letter").click()
           
             function() {
@@ -30,8 +33,8 @@
                  total_guesses = total_guesses - 1;
                 if (total_guesses <= 0) {
                   $("#error_msg").html("You are out of guesses. YOU LOSE!")
-            } else {
-                $(#numleft").html(total_guesses); 
+                 } else {
+                  $(#numleft").html(total_guesses); 
                   
                   }
           
@@ -54,7 +57,7 @@
 
   <div id="wordspace">
     <p>
-      The word to guess is <span id="word" style-"font-weight: bold;"></span>
+      The word to guess is <span id="word" style="font-weight: bold;"></span>
     </p>
   </div>
 
