@@ -9,10 +9,13 @@
     $(document).ready(
 
         function() {
-          
+
+          var things = ['Rock', 'Paper', 'Scissor'];
+
           var words_list = ['happy', 'sad', 'normal'];
           var total_guesses = 10; 
           var word = words_list[Math.floor(Math.random()*words_list.length)];
+          var thing = things[Math.floor(Math.random()*things.length)];
           var blanks = "";
 
           for (let i=0; i <= word.length; i++) {
@@ -25,7 +28,7 @@
 
 
           
-          $("#word").html(word);
+          $("#word").html(thing);
           
           
           $(".letter").click(
