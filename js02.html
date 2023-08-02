@@ -4,11 +4,6 @@
   <title>Hangman</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
   <script> 
-    $(function(){
-      alert("My First Jquery Test");
-   });
-  </script>
-  <script> 
       
   
     $(document).ready(
@@ -24,7 +19,6 @@
           
           
           $(".letter").click(
-          
             function() {
                var id = $(this).attr('id');
                console.log("Clicked on " + id); 
@@ -37,7 +31,7 @@
 
                  total_guesses = total_guesses - 1;
                }
-                if (total_guesses < 0) {
+                if (total_guesses <= 0) {
                   $("#error_msg").html("You are out of guesses. YOU LOSE!")
                  } else {
                     $(#numleft").html(total_guesses); 
