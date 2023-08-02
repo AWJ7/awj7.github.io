@@ -8,15 +8,9 @@
 </head>
 
 <body>
-
-   <script>
-
-      $("#space").hide();
-
-    </script>
   
-  <div class="header">
-    <h1 style="color: white; height: 200px;">This Is My Space-Themed Website!</h1>
+  <div class="header" height: 200px;>
+    <h1 style="color: white;">This Is My Space-Themed Website!</h1>
     <nav>
       <a href="https://nasa.gov">Learn more about NASA</a>
       <a href="../lab02.html">Explore human spaceflight records</a> 
@@ -26,7 +20,7 @@
    <script>
 
       $("#space").click(function(){
-         $("#space").show();
+         $("#space").fadeToggle();
             });
 
 
