@@ -6,9 +6,8 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script>
 
-      <!-- First interactive element, hover --> 
-      $(".main-img").hover(function(){
-         $(this).css("background-color", "blue");
+      $(".main-img").click(function(){
+         $("#space").fadeToggle(); 
             });
 
 
@@ -25,7 +24,7 @@
       <a href="../lab02.html">Explore human spaceflight records</a> 
     </nav>
   </div>
-  <div class="main-img"><img src="../space.jpg"></img></div>
+  <div class="main-img"><img id="space" src="../space.jpg"></img></div>
   <h6 class="caption"><em>A new photo taken by the James Webb telescope. You can see more James Webb photos <a href="https://webbtelescope.org/news/first-images/gallery">here!</a></em></h6>
   <br/>
   <br/>
@@ -37,12 +36,11 @@
     <h3 class="footer-text">Happy Launching!</h3>
     <button id="button">Click me!</button>
       <script>
-         <!-- Second interactive element, button --> 
+         
 
-        $("button").click( 
-           function() {
-            $('#launch').attr("src","../moon.jpg");
-            $("button").fade();
+        $("button").click(function() {
+            $("#launch").attr("src","../moon.jpg");
+            $("button").toggle(); 
               }
           );
   
