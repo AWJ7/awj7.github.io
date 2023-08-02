@@ -35,7 +35,7 @@
                      if (total_guesses < 0) {
                         $("#error_msg").html("You are out of guesses. YOU LOSE!")
                  } else {
-                    $(#numleft").html(total_guesses); 
+                    $("#numleft").html(total_guesses); 
               
                       if (word.includes(id)) { 
                          var index = word.indexOf(id);
@@ -65,7 +65,7 @@
 
   <div id="chances">
     <p>
-      You have <span id="nnumlef">10</span> chances left. 
+      You have <span id="numleft">10</span> chances left. 
       
     </p>
   </div>
