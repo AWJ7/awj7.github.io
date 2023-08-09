@@ -21,7 +21,7 @@
       $(document).ready( function() {
 
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
-          var yearIs2005 = false;
+          var yearIs2005 = true;
         
           L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             maxZoom: 19, 
@@ -39,12 +39,15 @@
                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
                       }
                     }).addTo(map);
-          } else {
+          }
+      
+       $("#button").click( function () {
+           
+            if (yearIs2005 == true) {
+              L.geoJson(eelGrass2005).removeFrom(map); 
 
-            L.geoJson(eelGrass2005).removeFrom(map); 
 
-
-            L.geoJson(eelGrass2015, 
+              L.geoJson(eelGrass2015, 
                     { color: "#006400",
                       weight: 3,
                       opacity: .75,
@@ -52,12 +55,32 @@
                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
                       }
                     }).addTo(map);
-          }
+
+              yearIs2005 = false; 
+
+              
+            } else {
+
+              L.geoJson(eelGrass2015).removeFrom(map); 
+              
+              L.geoJson(eelGrass2005, 
+                    { color: "#002800",
+                      weight: 3,
+                      opacity: .5,
+                      onEachFeature: function(feature, layer) {
+                        layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
+                      }
+                    }).addTo(map);
+            }
+
+
+         
+       }); 
+
+        
       }); 
-
-      
     </script>
-
+    
     
   </head>
 
