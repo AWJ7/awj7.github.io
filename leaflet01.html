@@ -5,7 +5,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <style>
-      #map1 { height: 400px; width: 700px; }
+      #map { height: 400px; width: 700px; }
       html, body { hieght: 100%; margin: 0; padding: 0; }
     </style>
     <script>
@@ -17,7 +17,7 @@
       
       $(document).ready( function() {
 
-        var map = L.map('map1', {
+        var map = L.map('map', {
             center: [ 43.7034, -72.2887 ],
             zoom: 15,
             layers: [OpenStreetMap_HOT]
@@ -33,7 +33,7 @@
 
   <body onload="initialize()">
     <h1>Hello Campus!</h1>
-    <div id="map1"></div>
+    <div id="map"></div>
     
   </body>
 </html>
