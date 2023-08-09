@@ -2,31 +2,30 @@
 <html>
   <head>
     <title>Hello Campus!</title>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+    
     <style>
       #map { height: 400px; width: 700px; }
       html, body { hieght: 100%; margin: 0; padding: 0; }
     </style>
+    
     <script>
-      
-      var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}{y}.png',
-        { maxZoom 19, attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
-        })
-      
-      
+
       $(document).ready( function() {
 
-        var map = L.map('map', {
-            center: [ 43.7034, -72.2887 ],
-            zoom: 15,
-            layers: [OpenStreetMap_HOT]
-                     })
-      });
-
-
-
-
+          var map = L.map('map').setView([43.7034, -72.2887], 15);
+        
+          var OpenStreetMap_HOT = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png' {
+              maxZoom 19, 
+              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
+              }).addTo(map);
+      }); 
       
     </script>
   </head>
