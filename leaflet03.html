@@ -32,7 +32,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
             }).addTo(map);
 
-          year2005 = L.geoJson(eelGrass2005, 
+          var year2005 = L.geoJson(eelGrass2005, 
                       { color: "#002800",
                         weight: 3,
                        opacity: 1,
@@ -41,7 +41,7 @@
                        }
                       }).addTo(map);
 
-          year2015 = L.geoJson(eelGrass2015, 
+          var year2015 = L.geoJson(eelGrass2015, 
                      { color: "#006400",
                        weight: 3,
                        opacity: .5,
@@ -58,6 +58,7 @@
             year2015.addTo(map); 
         } else {
             dataYear2005 = true;
+          }
       }); 
       
     </script>
