@@ -15,13 +15,13 @@
         })
       
       
-      function initialize() {
+      $(document).ready( function() {
         var map = L.map('map1', {
             center: [ 43.7034, -72.2887 ],
             zoom: 15,
             layers: [OpenStreetMap_HOT]
                      })
-      }
+      });
 
 
 
