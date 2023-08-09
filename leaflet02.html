@@ -14,48 +14,39 @@
     <style>
       #map { height: 400px; width: 700px; }
       html, body { height: 100%; margin: 0; padding: 0; }
-      #buttons { padding: 10px; background: #f3d1c9; }
     </style>
     
     <script>
 
       $(document).ready( function() {
 
-        
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
-          var dataYear2005 = true;
         
           L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-            maxZoom: 19, 
+            maxZoom: 10, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
             }).addTo(map);
 
-          year2005 = L.geoJson(eelGrass2005, 
-                      { color: "#002800",
-                        weight: 3,
-                       opacity: 1,
-                       onEachFeature: function(feature, layer) {
-                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
-                       }
-                      }).addTo(map);
+          L.geoJson(eelGrass2005, 
+                    { color: "#002800",
+                      weight: 3,
+                      opacity: .5,
+                      onEachFeature: function(feature, layer) {
+                        layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
+                      }
+                    }).addTo(map);
 
-          year2015 = L.geoJson(eelGrass2015, 
-                     { color: "#006400",
-                       weight: 3,
-                       opacity: .5,
-                       onEachFeature: function(feature, layer) {
-                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
-                       }
-                      });
+          L.geoJson(eelGrass2015, 
+                    { color: "#006400",
+                      weight: 3,
+                      opacity: .75,
+                      onEachFeature: function(feature, layer) {
+                        layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
+                      }
+                    }).addTo(map);
 
 
-        $("#toggleYear").click( function() {
-          if (dataYear2005) {
-            dataYear2005 = false;
-            year2005.removeFrom(map); 
-            year2015.addTo(map); 
-        } else {
-            dataYear2005 = true;
+        
       }); 
       
     </script>
@@ -64,8 +55,6 @@
   <body>
     <h1>Hello Campus!</h1>
     <div id="map"></div>
-    <div id="buttons">
-     <button id="toggleYear">Toggle the Data Year (2005 or 2015).</button>
-    </div>
+    
   </body>
 </html>
