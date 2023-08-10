@@ -50,8 +50,25 @@
            
             if (yearIs2005 == true) {
               layerGroup.removeLayer(eG2005);
+
+              var eG2015 = L.geoJson(eelGrass2005, 
+                            { color: "#002800",
+                             weight: 3,
+                             opacity: .5,
+                            onEachFeature: function(feature, layer) {
+                               layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
+                                }
+                                 });
+
+              layerGroup.addLayer(eG2015);
               yearIs2005 = false; 
-            } 
+              
+            } else {
+                  layerGroup.removeLayer(eG2015);
+                  layerGroup.addLayer(eG2005);
+                  yearIs2005 = true;
+              
+            }
 
          
        }); 
