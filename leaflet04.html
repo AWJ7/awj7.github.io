@@ -40,11 +40,20 @@
               }
           });
 
-          $.when(response).done(function() {
-        
-            
+          var response1 = $.ajax({
+              url: "https://awj7.github.io/eelGrass2015_2.geojson",
+              dataType: "json",
+              success: console.log("It worked again!"),
+              error: function(xhr) {
+                   alert(xhr.statusText); 
+              }
+          });
 
-            
+          
+
+          $.when(response & response1).done(function() {
+        
+          
         
             var eG2005 = L.geoJson(response.responseJSON, 
                     { color: "#002800",
@@ -56,6 +65,13 @@
                     }); 
 
 
+            var eG2015 = L.geoJson(response1.responseJSON, 
+                            { style: symbology,
+                            onEachFeature: function(feature, layer) {
+                               layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
+                                }
+                           });
+            
         function symbology(feature) {
           var acres = feature.properties.ACRES;
           var lineColor = "";
