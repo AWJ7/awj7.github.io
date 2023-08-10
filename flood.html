@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Hello Campus!</title>
+    <title>Ecocide in Practice: The Nova Kakhovka Dam</title>
+
+    <!-- load scripts for jquery, css, and leaflet -->
      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -9,52 +11,61 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
    crossorigin=""></script>
-    <script src="floodExtentUKR.geojson"></script>
-    <script src=""></script>
+
+    <!-- default style preferences --> 
+    
     <style>
       #map { height: 400px; width: 700px; }
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
     
+     <!-- script for init of leaflet map -->
     <script>
 
       $(document).ready( function() {
 
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
-        
-          L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-            maxZoom: 19, 
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
-            }).addTo(map);
+          var layerGroup = new L.LayerGroup();
 
-          L.geoJson(eelGrass2005, 
+          var title = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19, 
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>'
+            });
+          layerGroup.addLayer(title);
+          layerGroup.addTo(map);
+
+          var response = $.ajax({
+              url: "https://drive.google.com/uc?export=download&id=1pPxPZthAw9I3sHcnbv5lKvEo3kWs64Tu",
+              dataType: "json",
+              success: console.log("It worked!"),
+              error: function(xhr) {
+                   alert(xhr.statusText); 
+              }
+          });
+          
+          $.when(response).done(function() {
+    
+            var dataFlood = L.geoJson(response.responseJSON, 
                     { color: "#002800",
                       weight: 3,
                       opacity: .5,
                       onEachFeature: function(feature, layer) {
                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
                       }
-                    }).addTo(map);
+                    });
 
-          L.geoJson(eelGrass2015, 
-                    { color: "#006400",
-                      weight: 3,
-                      opacity: .75,
-                      onEachFeature: function(feature, layer) {
-                        layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
-                      }
-                    }).addTo(map);
-
-
+            layerGroup.addLayer(dataFlood); 
         
       }); 
-      
+
+   });
     </script>
+    
+    
   </head>
 
   <body>
-    <h1>Hello Campus!</h1>
+    <h1>Flood Map</h1>
     <div id="map"></div>
-    
   </body>
 </html>
