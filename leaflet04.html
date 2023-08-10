@@ -31,9 +31,9 @@
           layerGroup.addLayer(title);
 
           var response = $.ajax({
-              url: "eelGrass2005_2.geojson",
+              url: "http://awj7.github.io/eelGrass2005_2.geojson",
               dataType: "json",
-              success: console.log(eelGrass2005_2.geojson),
+              success: console.log("It worked!"),
               error: function(xhr) {
                    alert(xhr.statusText); 
               }
