@@ -9,8 +9,8 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
    crossorigin=""></script>
-    <script src="eelgrass2015.geojson"></script>
-    <script src="eelGrass2005.geojson"></script>
+
+    
     <style>
       #map { height: 400px; width: 700px; }
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -26,7 +26,17 @@
           var yearIs2005 = true;
         
           var layerGroup = new L.LayerGroup();
-          
+
+          var response = $.ajax({
+              url: "eelGrass2005_2.geojson",
+              dataType: "json",
+              success: console.log("Data loaded!"),
+              error: function(xhr) {
+                   alert(xhr.statusText); 
+              }
+          });
+
+          $.when(response).done(function() {
         
             var title = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19, 
@@ -35,7 +45,7 @@
 
             layerGroup.addLayer(title);
         
-            var eG2005 = L.geoJson(eelGrass2005, 
+            var eG2005 = L.geoJson(response.responseJSON, 
                     { color: "#002800",
                       weight: 3,
                       opacity: .5,
@@ -70,7 +80,8 @@
         
         layerGroup.addLayer(eG2005); 
         layerGroup.addTo(map);
-      
+
+       $("#button").show(); 
        $("#button").click( function () {
            
             if (yearIs2005 == true) {
@@ -90,6 +101,8 @@
 
         
       }); 
+
+   });
     </script>
     
     
@@ -99,7 +112,7 @@
     <h1>Eelgrass in Portland NH</h1>
     <div id="map"></div>
     <h5>Press the button to change the year from 2005 to 2015.</h5>
-    <button id="button">Click here</button>
+    <button id="button" hidden>Click here</button>
     <p>Red areas in the 2015 dataset represent > 200 acres</p>
     
   </body>
