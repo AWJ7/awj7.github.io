@@ -23,39 +23,35 @@
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
           var yearIs2005 = true;
         
-          L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+          var layerGroup = new L.LayerGroup();
+          layerGroup.addTo(map);
+        
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
             }).addTo(map);
 
-
-          if (yearIs2005 == true) {
-            
-            L.geoJson(eelGrass2005, 
+          var eelGrass2005 = L.geoJson(eelGrass2005, 
                     { color: "#002800",
                       weight: 3,
                       opacity: .5,
                       onEachFeature: function(feature, layer) {
                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
                       }
-                    }).addTo(map);
-          }
+                    });
+        layerGroup.addLayer(eelGrass2005); 
       
        $("#button").click( function () {
            
             if (yearIs2005 == true) {
-              L.geoJson(eelGrass2005).removeFrom(map); 
-
-            
-
+              map.removeLayer(eelGrass2005);
               yearIs2005 = false; 
 
-              
             } else {
 
               L.geoJson(eelGrass2015).removeFrom(map); 
 
-              <!-- 
+            
               L.geoJson(eelGrass2005, 
                     { color: "#002800",
                       weight: 3,
