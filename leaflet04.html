@@ -56,14 +56,6 @@
                     }); 
 
 
-           var eG2015 = L.geoJson(eelGrass2015, 
-                            { style: symbology,
-                            onEachFeature: function(feature, layer) {
-                               layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
-                                }
-                                 });
-
-
         function symbology(feature) {
           var acres = feature.properties.ACRES;
           var lineColor = "";
