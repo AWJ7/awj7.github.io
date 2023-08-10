@@ -20,17 +20,20 @@
 
       $(document).ready( function() {
 
-
-          
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
           var yearIs2005 = true;
-        
           var layerGroup = new L.LayerGroup();
+
+          var title = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19, 
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>'
+            });
+          layerGroup.addLayer(title);
 
           var response = $.ajax({
               url: "eelGrass2005_2.geojson",
               dataType: "json",
-              success: console.log("Data loaded!"),
+              success: console.log(eelGrass2005_2.geojson),
               error: function(xhr) {
                    alert(xhr.statusText); 
               }
@@ -38,12 +41,9 @@
 
           $.when(response).done(function() {
         
-            var title = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19, 
-            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a>'
-            });
+            
 
-            layerGroup.addLayer(title);
+            
         
             var eG2005 = L.geoJson(response.responseJSON, 
                     { color: "#002800",
