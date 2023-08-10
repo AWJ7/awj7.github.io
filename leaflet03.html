@@ -23,7 +23,7 @@
           var map = L.map('map').setView([43.07005623286285, -70.81053557810661], 15);
           var yearIs2005 = true;
         
-          var layerGroup = L.LayerGroup();
+          var layerGroup = new L.LayerGroup();
           
         
             var title = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
@@ -34,22 +34,22 @@
             layerGroup.addLayer(title);
         
 
-          L.geoJson(eelGrass2005, 
+            var eG2005 = L.geoJson(eelGrass2005, 
                     { color: "#002800",
                       weight: 3,
                       opacity: .5,
                       onEachFeature: function(feature, layer) {
                         layer.bindPopup("<b>Acres: " + feature.properties.ACRES + "</b><br/><b>Year: " + feature.properties.YEAR_ + "</b>");
                       }
-                    }).addTo(map); 
+                    }); 
         
-        layerGroup.addLayer(eelGrass2005); 
+        layerGroup.addLayer(eG2005); 
         layerGroup.addTo(map);
       
        $("#button").click( function () {
            
             if (yearIs2005 == true) {
-              layerGroup.removeLayer(eelGrass2005);
+              layerGroup.removeLayer(eG2005);
               yearIs2005 = false; 
             } 
 
