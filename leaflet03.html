@@ -24,7 +24,7 @@
           var yearIs2005 = true;
         
           var layerGroup = new L.LayerGroup();
-          layerGroup.addTo(map);
+          
         
             var title = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
             maxZoom: 19, 
@@ -44,6 +44,7 @@
                     });
         
         layerGroup.addLayer(eelGrass2005); 
+        layerGroup.addTo(map);
       
        $("#button").click( function () {
            
