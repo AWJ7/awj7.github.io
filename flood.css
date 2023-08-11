@@ -1,6 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
+  width: auto; 
 }
 
 body {
@@ -45,10 +46,9 @@ a {
 /* MAIN IMG */
 
 #container {
-    position:relative;
 }
+
 #contents {
-    background:white;
 }
 
 #mainimg {
