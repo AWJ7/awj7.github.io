@@ -46,6 +46,12 @@ body {
 #contents {
     background:white;
 }
+
+#contents img {
+    width: auto; 
+
+  
+}
 #gradient {
     position:absolute;
     z-index:2;
