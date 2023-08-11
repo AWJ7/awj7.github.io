@@ -65,16 +65,13 @@
     <!-- General JQuery Stuff -->
 
     <script>
-
-      
         $(document).ready(function () {
-            $("#link1").on('click', function () {
-                $("#link1").addClass("active");
+            $("a").on('click', function () {
+                $("a").removeClass("active");
+                $(this).addClass("active");
+                
             });
         });
-
-
-      
     </script>
 
 
@@ -86,7 +83,7 @@
 <!-- Top Nav --> 
     <div class="topnav">
       <a class="active" href="#home">Home</a>
-      <a id="#link1" href="#background">Background</a>
+      <a href="#background">Background</a>
       <a href="#map">Mapping Ecocide</a>
       <a href="#conclusion">Concluding Thoughts</a>
     </div>
