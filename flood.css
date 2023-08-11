@@ -53,17 +53,13 @@ a {
 
 #container {
     position:relative;
-    padding:50px;
-    margin:50px;
 }
 #contents {
     background:white;
 }
 
-#contents img {
+#mainimg {
     width: 100%; 
-
-  
 }
 #gradient {
     position:absolute;
