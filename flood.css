@@ -1,9 +1,12 @@
-
-/* TOP NAV */
-
 a {
   font-family: sans-serif; 
 }
+
+body {
+  background-color: #FAFAFA;
+}
+
+/* TOP NAV */
 
 /* Add a black background color to the top navigation */
 .topnav {
