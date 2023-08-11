@@ -68,8 +68,8 @@
 
       
         $(document).ready(function () {
-            $("a").on('click', function () {
-                $("a").addClass("active");
+            $("#link1").on('click', function () {
+                $("#link1").addClass("active");
             });
         });
 
@@ -86,7 +86,7 @@
 <!-- Top Nav --> 
     <div class="topnav">
       <a class="active" href="#home">Home</a>
-      <a href="#background">Background</a>
+      <a id="#link1" href="#background">Background</a>
       <a href="#map">Mapping Ecocide</a>
       <a href="#conclusion">Concluding Thoughts</a>
     </div>
