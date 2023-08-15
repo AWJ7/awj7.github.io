@@ -12,6 +12,7 @@
    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
    crossorigin=""></script>
     <link rel="stylesheet" href="../flood.css">
+    <script src="floodDepth_simplified2.geojson.json"></script>
 
     <!-- default style preferences --> 
     
@@ -46,7 +47,7 @@
           
           $.when(response).done(function() {
     
-            var dataFlood = L.geoJson(response.responseJSON, 
+            var dataFlood = L.geoJson(ukrDepth, 
                     { color: "#002800",
                       weight: 3,
                       opacity: .5,
