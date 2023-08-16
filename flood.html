@@ -13,7 +13,7 @@
    crossorigin=""></script>
     <link rel="stylesheet" href="../flood.css">
     
-    <script src="zzEast.geojson"></script>
+    <script src="./zzEast.geojson"></script>
 
     <!-- default style preferences --> 
     
@@ -34,13 +34,14 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
             }).addTo(map);
 
-          L.geoJson(zzEast, 
+        <--
+          L.geoJson('https://awj7.github.com/zzEast.geojson', 
                     {color: "#006400",
                       weight: 3,
                       opacity: .75,
                       }
                     }).addTo(map);
-        
+        -->
       });
     </script>
     
