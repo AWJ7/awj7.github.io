@@ -7,6 +7,13 @@ a {
   font-family: sans-serif; 
 }
 
+h1 {
+  text-align: center; 
+  font-size: 50px; 
+  font-family: serif;
+  padding: 10px 10px 10px 10px;
+}
+
 /* TOP NAV */
 
 /* Add a black background color to the top navigation */
