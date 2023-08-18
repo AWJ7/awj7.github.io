@@ -13,9 +13,6 @@
    crossorigin=""></script>
     <link rel="stylesheet" href="../flood.css">
     
-    <script src="./zzEast.geojson"></script>
-    <script src="./zzWest.geojson"></script>
-    <script src="./zzUnfinished.geojson"></script>
     <script src="./floodDepth_simplified2.geojson"></script>
     
 
@@ -37,29 +34,6 @@
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="http://hot.osm.org">HOT OSM</a>'
             }).addTo(map);
-
-        
-          L.geoJson(zzEast, 
-                    {color: "#006400",
-                      weight: 3,
-                      opacity: .75,
-                      }
-                    ).addTo(map);
-
-        L.geoJson(zzWest, 
-                    {color: "red",
-                      weight: 3,
-                      opacity: .75,
-                      }
-                    ).addTo(map);
-
-        L.geoJson(zzUnfinished, 
-                    {color: "blue",
-                      weight: 3,
-                      opacity: .75,
-                      }
-                    ).addTo(map);
-
 
         L.geoJson(ukrDepth, 
                     {color: "blue",
@@ -99,9 +73,12 @@
 
 <!-- Main Image Header --> 
 
+    <div id="banner"></div>
+
+    
     <div id="container">
       <div id="contents">
-       <img style="width: 100%; height: 650px;" src="https://s.yimg.com/uu/api/res/1.2/XzmLWpm.K_OwdlVFBvWtow--~B/Zmk9c3RyaW07aD02MjQ7cT04MDt3PTEyMDA7YXBwaWQ9eXRhY2h5b24-/https://media.zenfs.com/en/ap.org/cf996eff50f54ccdd5ac37bdd30e1606" id="mainimg">
+       <img style="width: 100%; height: 650px;" src="https://media.npr.org/assets/img/2023/06/08/02_nova-kakhovka-dam-and-hydroelectric-plant-after-collapse_07jun2023_wv03-web-res_slide-4e296f93727d8f71f92a10e2c725679273640f3f.jpg" id="mainimg">
         </div>
         <div id="gradient">
       </div>
