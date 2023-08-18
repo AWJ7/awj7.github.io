@@ -30,7 +30,7 @@
 
           var map = L.map('map').setView([46.75508254454708, 33.05787022486378], 10);
         
-          L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+          L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of <a href="https://carto.com/attributions">CARTO</a>'
             }).addTo(map);
