@@ -16,6 +16,7 @@
     <script src="./zzEast.geojson"></script>
     <script src="./zzWest.geojson"></script>
     <script src="./zzUnfinished.geojson"></script>
+    <script src="./floodDepth_simplified2.geojson"></script>
     
 
     <!-- default style preferences --> 
@@ -58,7 +59,15 @@
                       opacity: .75,
                       }
                     ).addTo(map);
-  
+
+
+        L.geoJson(ukrDepth, 
+                    {color: "blue",
+                      weight: 3,
+                      opacity: .75,
+                      }
+                    ).addTo(map);
+      
       });
     </script>
     
