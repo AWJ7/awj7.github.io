@@ -28,7 +28,7 @@ a {
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #5B7BAB;
-  color: black;
+  color: white;
 }
 
 /* Add a color to the active/current link */
@@ -55,4 +55,11 @@ a {
   font-size: 72px; 
   text-align: center; 
   padding-top: 35%; 
+}
+
+#banner h2 {
+  font-family: serif; 
+  font-size: 35px;
+  padding-top: 10px; 
+  text-align: center; 
 }
