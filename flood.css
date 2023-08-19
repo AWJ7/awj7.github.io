@@ -83,7 +83,7 @@ h1 {
 }
 
 #section1 #bodyimg img{
-  width: auto;
+  width: inherit;
 }
 
 #section1 p {
