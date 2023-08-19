@@ -44,8 +44,9 @@ h1 {
 }
 
 .content_img:hover div{
-    width: 600px;
-    padding: 8px 15px;
+    width: 580px;
+    padding: 10px;
+    margin-top: 350px; 
     bottom: 0; 
     visibility: visible;
     opacity: 0.7; 
