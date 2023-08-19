@@ -67,6 +67,11 @@
             L.geoJson(ukrDistricts, 
                     { style: symbology1,}).addTo(map1);
 
+            var popup = L.popup()
+              .setLatLng([51.513, -0.09])
+              .setContent("Location of the Nova Khakovna Dam")
+              .openOn(map1);
+
             function symbology1(feature) {
              var oblast = feature.properties.VARNAME_1;
 
