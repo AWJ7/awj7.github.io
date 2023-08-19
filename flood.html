@@ -46,7 +46,20 @@
           var depth = feature.properties.Depth;
           var lineColor = "";
 
-          if (Depth = 0) {lineColor = "red"};
+          for (let i = 0; i < depth; i++) {
+            if (depth = i) {
+              return {
+                color: "#305480",
+                weight: 3, 
+                opacity: depth*0.125
+              
+                };
+
+            }; 
+          }
+
+          
+          if (depth = 0) {lineColor = "red"};
 
           return {
             color: lineColor,
