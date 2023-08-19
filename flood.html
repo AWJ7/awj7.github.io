@@ -36,12 +36,26 @@
             }).addTo(map);
 
         L.geoJson(ukrDepth, 
-                    {color: "#305480",
-                      weight: 0.5,
-                      opacity: 1.0,
-                      }
-                    ).addTo(map);
-      
+                    { style: symbology,
+                            onEachFeature: function(feature, layer) {
+                               layer.bindPopup("<b>Floodwater Depth: " + feature.properties.Depth);
+                                }
+                                 }).addTo(map);
+
+        function symbology(feature) {
+          var depth = feature.properties.Depth;
+          var lineColor = "";
+
+          if (Depth = 0) {lineColor = "red"};
+
+          return {
+            color: lineColor,
+            weight: 3,
+            opacity: .5
+          };
+          
+        }
+        
       });
     </script>
     
