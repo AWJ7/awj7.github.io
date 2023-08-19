@@ -75,24 +75,24 @@
             function symbology1(feature) {
              var oblast = feature.properties.VARNAME_1;
 
-              if (oblast == "Cherson|Khersons'ka Oblast'") {
-                return {
-                fillColor: "#305480",
-                fillOpacity: 0.8,
-                color: "#305480",
-                weight: 0.5, 
-                opacity: 1 ,
-                };
-                
+            if (oblast == "Cherson|Khersons'ka Oblast'") {
+            return {
+             fillColor: "#305480",
+             fillOpacity: 0.8,
+             color: "#305480",
+             weight: 0.5,
+             opacity: 1,
+                  };
               } else {
+              return {
                 fillColor: "#222222",
                 fillOpacity: 0.6,
                 color: "#222222",
-                weight: 0.5, 
-                opacity: 1 ,
-                };
-                
-              }
+                weight: 0.5,
+               opacity: 1,
+           };
+    }
+};
 
             }; 
       
