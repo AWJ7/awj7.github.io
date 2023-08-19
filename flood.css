@@ -69,3 +69,17 @@ h1 {
   font-size: 35px;
   text-align: center; 
 }
+
+/* SECTION 1 */
+
+#section1 {
+  width: 50%;
+}
+
+#section1 p {
+  font-size: 18px; 
+  line-height: 1.5em; 
+  color: #222222;
+  padding-top: 10px;
+  padding-left: 3.5%;
+}
