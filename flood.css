@@ -73,7 +73,13 @@ h1 {
 /* SECTION 1 */
 
 #section1 {
-  width: 50%;
+  width: 65%;
+}
+
+#section1 #bodyimg {
+  width: 35%; 
+  align-content: right; 
+  padding-right: 7%;
 }
 
 #section1 p {
@@ -81,5 +87,5 @@ h1 {
   line-height: 1.5em; 
   color: #222222;
   padding-top: 10px;
-  padding-left: 3.5%;
+  padding-left: 7%;
 }
