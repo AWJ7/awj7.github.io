@@ -44,15 +44,10 @@
 
         function symbology(feature) {
           var depth = feature.properties.Depth;
-          var lineColor = "";
-
-          for (let i = 0; i < depth; i++) {
-            if (depth == i) {
-              return {
-                color: "#305480",
-                weight: 3, 
-                opacity: depth*0.125
-              
+          return {
+              color: "#305480",
+              weight: 3, 
+              opacity: depth*0.125
                 };
 
             }; 
@@ -60,7 +55,7 @@
         
       });
 
-     });
+      
     </script>
     
     <!-- General JQuery Stuff -->
