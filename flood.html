@@ -35,7 +35,14 @@
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map);
-      
+
+          var map1 = L.map('map1').setView([0.0], 8.5);
+
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 19, 
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
+            }).addTo(map1);
+  
         <!-- Flooding Polygons --> 
                         
         L.geoJson(ukrDepth, 
@@ -45,6 +52,7 @@
                                 }
                                  }).addTo(map);
 
+  
         function symbology(feature) {
           var depth = feature.properties.Depth;
           return {
@@ -56,6 +64,37 @@
                 };
 
             }; 
+
+
+ <!-- Oblast Polygons --> 
+   
+            L.geoJson(ukrDistricts, 
+                    { style: symbology1,}).addTo(map);
+
+            function symbology1(feature) {
+             var oblast = feature.properties.VARNAME_1;
+
+              if (oblast == "Cherson|Khersons'ka Oblast'") {
+                return {
+                fillColor: "#305480",
+                fillOpacity: 0.8,
+                color: "#305480",
+                weight: 0.5, 
+                opacity: 1 ,
+                };
+                
+              } else {
+                fillColor: "#222222",
+                fillOpacity: 0.6,
+                color: "#222222",
+                weight: 0.5, 
+                opacity: 1 ,
+                };
+                
+              }
+
+            }; 
+      
           });
 
       
@@ -106,6 +145,10 @@
          <div>Ukrainian soldiers fire a mortar towards Russian positions at the front line, near Bakhmut, Donetsk region, Ukraine, Saturday, August 12 2023 [Libkos/ AP]</div>
       </div>
        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+
+       <br>
+       <br>
+      <div id="map1"></div>
     </div>
 
     <div id="section2">
