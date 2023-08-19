@@ -28,13 +28,17 @@
 
       $(document).ready( function() {
 
-          var map = L.map('map').setView([47.4667, 34.1667], 9);
+          var map = L.map('map').setView([47.4667, 34.1667], 7);
         
           L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map);
 
+
+        <!-- Dam POI --> 
+          L.marker([47.4667, 34.1667]).addTo(map);
+          marker.bindPopup("<b>Nova Khakovka Dam</b><br>Kherson Oblast, Ukraine").openPopup();
       
         <!-- Flooding Polygons --> 
                         
