@@ -19,7 +19,11 @@ h1 {
 /* DIVIDERS */
 
 hr.rounded {
+  width: 65%; 
+  margin-top: -25px;
   border-top: 5px solid #222222;
+  border-width: 5px; 
+  margin-bottom: 40px; 
   border-radius: 3px;
   width: 45%
 }
@@ -65,7 +69,8 @@ hr.rounded {
     height: inherit; 
     background-size: cover;
     color: white;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #banner h1 {
@@ -85,14 +90,15 @@ hr.rounded {
 
 #section1 #bodyimg img{
   float: right; 
-  width: 500px;
+  width: 600px;
+  padding-right: 3.5%
 }
 
 #section1 p {
-  font-size: 18px; 
+  font-size: 24px; 
   line-height: 1.5em; 
   color: #222222;
-  padding-top: 10px;
-  padding-left: 7%;
-  width: 65%;
+  padding-top: 1%;
+  padding-left: 3.5%;
+  width: 50%;
 }
