@@ -43,8 +43,6 @@
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
-  
-        <!-- Flooding Polygons --> 
                         
         L.geoJson(ukrDepth, 
                     { style: symbology,
@@ -65,9 +63,6 @@
                 };
 
             }; 
-
-
- <!-- Oblast Polygons --> 
    
             L.geoJson(ukrDistricts, 
                     { style: symbology1,}).addTo(map);
@@ -94,9 +89,8 @@
     }
 };
 
-            }; 
-      
-          });
+            }); 
+
 
       
     </script>
