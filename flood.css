@@ -19,8 +19,9 @@ h1 {
 /* DIVIDERS */
 
 hr.rounded {
-  border-top: 5px solid #bbb;
+  border-top: 5px solid #222222;
   border-radius: 3px;
+  width: 45%
 }
 
 
@@ -84,7 +85,7 @@ hr.rounded {
 
 #section1 #bodyimg img{
   float: right; 
-  width: 300px;
+  width: 500px;
 }
 
 #section1 p {
