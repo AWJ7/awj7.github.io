@@ -16,6 +16,14 @@ h1 {
   padding: 10px 10px 10px 10px;
 }
 
+/* DIVIDERS */
+
+hr.rounded {
+  border-top: 5px solid #bbb;
+  border-radius: 3px;
+}
+
+
 /* TOP NAV */
 
 /* Add a black background color to the top navigation */
@@ -76,7 +84,7 @@ h1 {
 
 #section1 #bodyimg img{
   float: right; 
-  width: inherit;
+  width: 300px;
 }
 
 #section1 p {
