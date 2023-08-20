@@ -48,7 +48,7 @@
 
         var map2 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 14);
 
-            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map2);
@@ -81,13 +81,26 @@
               .setContent("<b>Kherson Oblast</b>, Location of the Nova Kakhovka Dam")
               .openOn(map1);
 
-            var damLocation = L.marker([46.776111, 33.371667]).addTo(map2);
-            var popup1 = damLocation.bindPopup("<b>The Nova Kakhovka Dam</b>, Kherson Oblast");
 
-            var video1 = L.marker([46.619375, 32.590016]).addTo(map2);
-            var popup2 = video1.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style="text-align:center;"><em>Source: @GeoConfirmed</em></p>");
-
+      <!-- Get videos for map --> 
         
+            var video1 = L.marker([46.619375, 32.590016]).addTo(map2);
+            var popup1 = video1.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style="text-align:center;"><em>Source: @3_bm15</em></p>");
+
+            var video2 = L.marker([46.780685, 33.327923]).addTo(map2);
+            var popup2 = video2.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/Ucz4qdzcBnYMZ5p2.mp4' frameborder='0'></iframe><p style="text-align:center;"><em>Source: @neonhandrail</em></p>");
+
+            var video3 = L.marker([46.628025, 32.586626]).addTo(map2);
+            var popup3 = video3.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/rvvFzYPyyjgrTiI3.mp4' frameborder='0'></iframe><p style="text-align:center;"><em>Source: @GeoConfirmed</em></p>");
+
+            var video4 = L.marker([46.61803, 32.78445]).addTo(map2);
+            var popup4 = video4.bindPopup("<img width='auto' height='auto' src='https://awj7.github.io/highway.jpg'></img><p style="text-align:center;"><em>Source: РИА НОВОСТИ</em></p>");
+
+            <!-- var video5 = L.marker([46.619375, 32.590016]).addTo(map2); -->
+            <!-- var popup5 = video5.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style="text-align:center;"><em>Source: @GeoConfirmed</em></p>"); -->
+
+
+      
             function symbology1(feature) {
              var oblast = feature.properties.VARNAME_1;
 
