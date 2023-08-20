@@ -20,7 +20,7 @@
     <!-- default style preferences --> 
     
     <style>
-      #map { height: 400px; width: 700px; }
+      #map { height: 800px; width: 1000px; }
       #map1 { height: 350px; width: 550px; margin-left:3.5%; float:left; padding-right:0.5%;}
       #map2 { height: 600px; width: 1000px; }
       
@@ -46,7 +46,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
 
-        var map2 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 14);
+        var map2 = L.map('map2').setView([46.611086410959565, 32.8456397034663], 14);
 
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
@@ -95,10 +95,6 @@
 
             var video4 = L.marker([46.61803, 32.78445]).addTo(map2);
             var popup4 = video4.bindPopup("<img width='auto' height='auto' src='https://awj7.github.io/highway.jpg'></img><p style='text-align:center;'><em>Source: РИА НОВОСТИ</em></p>");
-
-            <!-- var video5 = L.marker([46.619375, 32.590016]).addTo(map2); -->
-            <!-- var popup5 = video5.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @GeoConfirmed</em></p>"); -->
-
 
       
             function symbology1(feature) {
