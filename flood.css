@@ -113,7 +113,7 @@ hr.rounded {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin-bottom: 20px; 
+    margin-bottom: 40px; 
 }
 
 #banner h1 {
@@ -137,7 +137,6 @@ p.middle {
   margin: auto; 
   padding-right: 10%;
   padding-left: 10%;
-  padding-top: 25px;
   padding-bottom: 25px; 
   font-size: 24px; 
   line-height: 1.5em; 
