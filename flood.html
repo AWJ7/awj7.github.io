@@ -21,7 +21,7 @@
     
     <style>
       #map { height: 400px; width: 700px; }
-      #map1 { height: 350px; width: 550px; margin-left:3.5%;}
+      #map1 { height: 350px; width: 550px; margin-left:3.5%; float:left; padding-right:0.5%;}
       #map2 { height: 600px; width: 1000px; }
       
       html, body { height: 100%; margin: 0; padding: 0; }
@@ -81,7 +81,7 @@
               .setContent("<b>Kherson Oblast</b>, Location of the Nova Kakhovka Dam")
               .openOn(map1);
 
-            var video1 = new L.Marker([46.619375, 32.590016]).openOn(map2);
+            var video1 = L.Marker([46.619375, 32.590016]).openOn(map2);
             var popup1 = video1.popup()
               .setContent("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe>");
 
