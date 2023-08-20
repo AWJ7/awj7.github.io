@@ -46,7 +46,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
 
-        var map2 = L.map('map2').setView([46.611086410959565, 32.8456397034663], 14);
+        var map2 = L.map('map2').setView([46.629742800461315, 32.59563764418123], 18);
 
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
@@ -84,20 +84,14 @@
 
       <!-- Get videos for map --> 
         
-            var video1 = L.marker([46.619375, 32.590016]).addTo(map);
+            var video1 = L.marker([46.619375, 32.590016]).addTo(map2);
             var popup1 = video1.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @3_bm15</em></p>");
 
-            var video2 = L.marker([46.780685, 33.327923]).addTo(map);
-            var popup2 = video2.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/Ucz4qdzcBnYMZ5p2.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @neonhandrail</em></p>");
+            var video2 = L.marker([46.628025, 32.586626]).addTo(map2);
+            var popup2 = video2.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/rvvFzYPyyjgrTiI3.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @GeoConfirmed</em></p>");
 
-            var video3 = L.marker([46.628025, 32.586626]).addTo(map);
-            var popup3 = video3.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/rvvFzYPyyjgrTiI3.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @GeoConfirmed</em></p>");
-
-            var video4 = L.marker([46.61803, 32.78445]).addTo(map);
-            var popup4 = video4.bindPopup("<img width='inherit' height='inherit' src='https://awj7.github.io/highway.jpg'></img><p style='text-align:center;'><em>Source: РИА НОВОСТИ</em></p>");
-
-            var video5 = L.marker([46.62972435257624, 32.59555181026427]).addTo(map);
-            var popup5 = video5.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/JbJi2ttoqYTEZcED.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: NBC News</em></p>");
+            var video3 = L.marker([46.62972435257624, 32.59555181026427]).addTo(map2);
+            var popup3 = video3.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/JbJi2ttoqYTEZcED.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: NBC News</em></p>");
 
       
             function symbology1(feature) {
@@ -180,11 +174,12 @@
     <br>
     <div id="section2">
       <h1>The Day of the Attack</h1>
-      <div id="map2" style="margin:auto"></div>
+      
     </div>
     <div id="section3">
       <h1>Assessing the Damage</h1>
       <div id="map"></div>
+      <div id="map2" style="margin:auto"></div>
     </div>
     <div id="section4">
       <h1>Concluding Thoughts</h1>
