@@ -20,7 +20,7 @@
     <!-- default style preferences --> 
     
     <style>
-      #map { height: 800px; width: 1200px; }
+      #map { height: 650px; width: 80%; margin-right:10%; margin-left:10%;}
       #map1 { height: 350px; width: 550px; margin-left:3.5%; float:left; padding-right:0.5%;}
       #map2 { height: 600px; width: 1000px; }
       
@@ -32,7 +32,7 @@
 
       $(document).ready( function() {
 
-          var map = L.map('map').setView([46.611086410959565, 32.8456397034663], 8.5);
+          var map = L.map('map').setView([46.611086410959565, 32.8456397034663], 9);
         
           L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 19, 
