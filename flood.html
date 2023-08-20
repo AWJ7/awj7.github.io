@@ -81,8 +81,8 @@
               .setContent("<b>Kherson Oblast</b>, Location of the Nova Kakhovka Dam")
               .openOn(map1);
 
-            var video1 = L.marker([46.619375, 32.590016]).addTo(map2);
-            var popup1 = video1.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe>").openPopup();
+            var damLocation = L.marker([46.619375, 32.590016]).addTo(map2);
+            var popup1 = damLocation.bindPopup("<b>The Nova Kakhovka Dam</b>, Kherson Oblast").openPopup();
 
         
             function symbology1(feature) {
