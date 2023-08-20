@@ -22,7 +22,7 @@
     <style>
       #map { height: 400px; width: 700px; }
       #map1 { height: 400px; width: 700px; }
-      #map2 { height: 400px; width: 700px; }
+      #map2 { height: 600px; width: 1000px; }
       
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
@@ -46,11 +46,11 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
 
-        var map2 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 6);
+        var map2 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 14);
 
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
-            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map2);
                         
         L.geoJson(ukrDepth, 
@@ -167,7 +167,7 @@
 
     <div id="section2">
       <h1>The Day of the Attack</h1>
-      <div id="map2"></div>
+      <div id="map2" style="text-align:right"></div>
     </div>
     <div id="section3">
       <h1>Assessing the Damage</h1>
