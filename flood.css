@@ -144,6 +144,7 @@ font-size: 24px;
 
 #section1 p.right {
   padding-right: 3.5%;
+  float:right; 
 }
 
 
