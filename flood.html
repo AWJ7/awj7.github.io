@@ -22,6 +22,7 @@
     <style>
       #map { height: 400px; width: 700px; }
       #map1 { height: 400px; width: 700px; }
+      #map2 { height: 400px; width: 700px; }
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
     
@@ -43,6 +44,13 @@
             maxZoom: 19, 
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
+
+        var map1 = L.map('map2').setView([46.611086410959565, 32.8456397034663], 6);
+
+            L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 19, 
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
+            }).addTo(map2);
                         
         L.geoJson(ukrDepth, 
                     { style: symbology,
@@ -153,10 +161,11 @@
 
     <div id="section2">
       <h1>The Day of the Attack</h1>
-      <div id="map"></div>
+      <div id="map2"></div>
     </div>
     <div id="section3">
       <h1>Assessing the Damage</h1>
+      <div id="map"></div>
     </div>
     <div id="section4">
       <h1>Concluding Thoughts</h1>
