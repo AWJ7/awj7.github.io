@@ -32,6 +32,14 @@
 
       $(document).ready( function() {
 
+          var mainIcon = L.icon({
+            iconUrl: './marker.png',
+            iconSize:     [38, 95], 
+            iconAnchor:   [22, 94], 
+            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+              });
+
+        
           var map = L.map('map').setView([46.611086410959565, 32.8456397034663], 9);
         
           L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
@@ -84,17 +92,17 @@
 
       <!-- Get videos for map --> 
         
-            var video1 = L.marker([46.619375, 32.590016]).addTo(map);
+            var video1 = L.marker([46.619375, 32.590016], {icon: mainIcon}).addTo(map);
             var popup1 = video1.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/sK_Le7-fIRy8xmzS.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @3_bm15</em></p>");
 
-            var video2 = L.marker([46.780685, 33.327923]).addTo(map);
+            var video2 = L.marker([46.780685, 33.327923], {icon: mainIcon}).addTo(map);
             var popup2 = video2.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/Ucz4qdzcBnYMZ5p2.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @neonhandrail</em></p>");
 
-            var video3 = L.marker([46.628025, 32.586626]).addTo(map);
+            var video3 = L.marker([46.628025, 32.586626], {icon: mainIcon}).addTo(map);
             var popup3 = video3.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/rvvFzYPyyjgrTiI3.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: @GeoConfirmed</em></p>");
 
-            var video4 = L.marker([46.61803, 32.78445]).addTo(map);
-            var popup4 = video4.bindPopup("<img width='auto' height='auto' src='https://awj7.github.io/highway.jpg'></img><p style='text-align:center;'><em>Source: РИА НОВОСТИ</em></p>");
+            var video4 = L.marker([46.61803, 32.78445], {icon: mainIcon}).addTo(map);
+            var popup4 = video4.bindPopup("<img width='inherit' height='inherit' src='https://awj7.github.io/highway.jpg'></img><p style='text-align:center;'><em>Source: РИА НОВОСТИ</em></p>");
 
       
             function symbology1(feature) {
