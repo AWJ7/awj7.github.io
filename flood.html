@@ -23,6 +23,7 @@
       #map { height: 400px; width: 700px; }
       #map1 { height: 400px; width: 700px; }
       #map2 { height: 400px; width: 700px; }
+      
       html, body { height: 100%; margin: 0; padding: 0; }
     </style>
     
@@ -45,7 +46,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
 
-        var map1 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 6);
+        var map2 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 6);
 
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
