@@ -93,20 +93,6 @@
             var video3 = L.marker([46.62972435257624, 32.59555181026427]).addTo(map2);
             var popup3 = video3.bindPopup("<iframe id='player' type='text/html' width='200' height='250' src='https://awj7.github.io/JbJi2ttoqYTEZcED.mp4' frameborder='0'></iframe><p style='text-align:center;'><em>Source: NBC News</em></p>");
 
-            L.Control.textbox = L.Control.extend({
-		          onAdd: function(map2) {
-			
-	        	var text = L.DomUtil.create('div');
-        		text.id = "info_text";
-        		text.innerHTML = "<p style='font-size:25px; font-family:sans-serif; font-weight:bold; background-color: white !important; margin-bottom:-10px;'>The City of Kherson, Ukraine</p>"
-        		return text;
-        		},
-
-		        onRemove: function(map2) {
-			    
-            }      
-	          });
-
 	L.control.textbox = function(opts) { return new L.Control.textbox(opts);}
 	L.control.textbox({ position: 'bottomleft' }).addTo(map2);
 
@@ -191,18 +177,22 @@
     </div>
     <br>
     <br>
+	  
     <div id="section2">
       <h1>The Day of the Attack</h1>
-      
     </div>
+
+	  
     <div id="section3">
       <h1>Assessing the Damage</h1>
       <div id="map"></div>
-      <div style="text-align:center;"><img style="width:25%" src="./scale.png"></img></div>
 	<p style="font-size:16px; font-family:sans-serif; font-weight:bold; text-align:center; margin-top:-10px;">Relative depth of floodwater from satellite imagery</p>
-      
-      <div style="position:relative;"><div id="map2" style="margin:auto"></div></div><div id="kherson" style="position:relative;">CITY OF KHERSON, UKRAINE</div>
+        <div style="text-align:center;"><img style="width:25%" src="./scale.png"></img></div>
+        <div id="map2" style="margin:auto"></div>
+        <p style="text-align: center; width:50%;"><strong>Click on points on the map to see geolocated videos of the flooding in Kherson posted to social media.</strong></p>
     </div>
+
+	  
     <div id="section4">
       <h1>Concluding Thoughts</h1>
     </div>
