@@ -132,6 +132,17 @@ hr.rounded {
 
 /* SECTION 1 */
 
+p.middle {
+
+  text-align: center; 
+  margin: auto; 
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-top: 40%;
+  
+}
+
+
 #section1 #bodyimg img{
   float: right; 
   width: 600px;
@@ -155,13 +166,6 @@ hr.rounded {
 
 /* SECTION 3 */
 
-#kherson {
-  font-size: 72px; 
-  font-family: sans-serif; 
-  text-align: center; 
-  position: absolute;
-  
-}
 
 
 
