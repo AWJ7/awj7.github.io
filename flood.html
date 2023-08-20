@@ -45,7 +45,7 @@
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles Courtesy of ESRI'
             }).addTo(map1);
 
-        var map1 = L.map('map2').setView([46.611086410959565, 32.8456397034663], 6);
+        var map1 = L.map('map2').setView([46.775816371902955, 33.37211897858772], 6);
 
             L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 25, 
@@ -79,6 +79,11 @@
               .setLatLng([46.76624264267707, 33.35219549690894])
               .setContent("<b>Kherson Oblast</b>, Location of the Nova Kakhovka Dam")
               .openOn(map1);
+
+            var popup = L.popup()
+              .setLatLng([46.76624264267707, 33.35219549690894])
+              .setContent("Kakhovka Hydroelectric Power Plant ")
+              .openOn(map2);
 
             function symbology1(feature) {
              var oblast = feature.properties.VARNAME_1;
