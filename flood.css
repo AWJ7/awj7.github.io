@@ -12,8 +12,6 @@ a {
 
 P {
   font-family: sans-serif; 
-  font-size: 24px; 
-  line-height: 1.5em; 
   color: #222222;
 }
 
@@ -115,6 +113,7 @@ hr.rounded {
     color: white;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 #banner h1 {
@@ -138,8 +137,10 @@ p.middle {
   margin: auto; 
   padding-right: 10%;
   padding-left: 10%;
-  padding-top: 40px;
+  padding-top: 25px;
   padding-bottom: 25px; 
+  font-size: 24px; 
+  line-height: 1.5em; 
   
 }
 
@@ -152,6 +153,8 @@ p.middle {
 
 #section1 p {
   width: 50%;
+  font-size: 24px; 
+  line-height: 1.5em; 
 }
 #section1 p.left {
   
