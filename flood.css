@@ -173,7 +173,7 @@ p.middle {
 
 /* SECTION 3 */
 
-#section3 img.bodyimg{
+#section3 #bodyimg2 img{
   float: right; 
   width: 600px;
   padding-right: 3.5%
