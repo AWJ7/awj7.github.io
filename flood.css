@@ -163,7 +163,7 @@ p.middle {
   line-height: 1.5em; 
 }
 #section1 p.left {
-  
+  margin-top: 0px; 
   padding-left: 3.5%;
 }
 
@@ -192,7 +192,7 @@ p.middle {
   line-height: 1.5em; 
 }
 #section3 p.left {
-  
+  margin-top: 0px; 
   padding-left: 3.5%;
 }
 
