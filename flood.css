@@ -160,11 +160,6 @@ p.middle {
   padding-left: 3.5%;
 }
 
-#section1 p.right {
-  padding-right: 3.5%;
-  float:right; 
-}
-
 /* SECTION 2 */
 
 .row {
@@ -177,6 +172,22 @@ p.middle {
 }
 
 /* SECTION 3 */
+
+#section3 img.bodyimg{
+  float: right; 
+  width: 600px;
+  padding-right: 3.5%
+}
+
+#section3 p {
+  width: 50%;
+  font-size: 24px; 
+  line-height: 1.5em; 
+}
+#section3 p.left {
+  
+  padding-left: 3.5%;
+}
 
 /* FOOTER */
 
