@@ -85,7 +85,8 @@ hr.rounded {
 .topnav {
   background-color: #ffffff;
   overflow: hidden;
-  position: sticky; 
+  position: fixed; 
+  width: 100%; 
 }
 
 /* Style the links inside the navigation bar */
