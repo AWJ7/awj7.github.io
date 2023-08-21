@@ -140,10 +140,11 @@ hr.rounded {
 
 p.middle {
 
-  text-align: center; 
+  text-align: justify; 
   margin: auto; 
   padding-right: 10%;
   padding-left: 10%;
+  padding-top: 20px; 
   padding-bottom: 25px; 
   font-size: 24px; 
   line-height: 1.5em; 
@@ -157,14 +158,14 @@ p.middle {
   padding-right: 3.5%
 }
 
-#section1 p {
+
+#section1 p.left {
   width: 50%;
   font-size: 24px; 
   line-height: 1.5em; 
-}
-#section1 p.left {
   margin-top: 0px; 
   padding-left: 3.5%;
+  text-align: justify;
 }
 
 /* SECTION 2 */
@@ -186,14 +187,13 @@ p.middle {
   padding-right: 3.5%
 }
 
-#section3 p {
+#section3 p.left {
   width: 50%;
   font-size: 24px; 
   line-height: 1.5em; 
-}
-#section3 p.left {
   margin-top: 0px; 
   padding-left: 3.5%;
+  text-align: justify;
 }
 
 /* FOOTER */
